@@ -47,36 +47,35 @@
 <div class="profile clear-block">
 
   <div class="linkedin_additional clear-block">
-    <?php //print $profile['linkedin_additional']; ?>
     <?php print $account->content['linkedin_additional']['options']['#value']; ?>
   </div>
   
   <div class="identification clear-block">
 
     <div class="identification-top clear-block">
-      <div <?php print drupal_attributes(array('class' => $account->content['identification']['profile_nationality']['#attributes']['class'])); ?>>
+      <div <?php print drupal_attributes($account->content['identification']['profile_nationality']['#attributes']); ?>>
         <h4><?php print check_plain($account->content['identification']['profile_nationality']['#title']); ?></h4>
         <div class="content"><span><?php print check_plain($account->content['identification']['profile_nationality']['#value']); ?></span></div>
       </div>
       
-      <div <?php print drupal_attributes(array('class' => $account->content['identification']['profile_date_of_birth']['#attributes']['class'])); ?>>
+      <div <?php print drupal_attributes($account->content['identification']['profile_date_of_birth']['#attributes']); ?>>
         <h4>Date of Birth</h4>
         <div class="content"><span><?php print check_plain($account->content['identification']['profile_date_of_birth']['#value']); ?></span></div>
       </div>
 
-      <div <?php print drupal_attributes(array('class' => $account->content['identification']['profile_age']['#attributes']['class'])); ?>>
+      <div <?php print drupal_attributes($account->content['identification']['profile_age']['#attributes']); ?>>
         <h4><?php print check_plain($account->content['identification']['profile_age']['#title']); ?></h4>
         <div class="content"><span><?php print check_plain($account->content['identification']['profile_age']['#value']); ?> years</span></div>
       </div>
 
     </div>
 
-    <div <?php print drupal_attributes(array('class' => $account->content['identification']['profile_occupation']['#attributes']['class'])); ?>>
+    <div <?php print drupal_attributes($account->content['identification']['profile_occupation']['#attributes']); ?>>
       <h4><?php print check_plain($account->content['identification']['profile_occupation']['#title']); ?></h4>
       <div class="content"><span><?php print check_plain($account->content['identification']['profile_occupation']['#value']); ?></span></div>
     </div>
     
-    <div <?php print drupal_attributes(array('class' => $account->content['identification']['profile_address']['#attributes']['class'])); ?>>
+    <div <?php print drupal_attributes($account->content['identification']['profile_address']['#attributes']); ?>>
       <h4><?php print check_plain($account->content['identification']['profile_address']['#title']); ?></h4>
       <div class="content"><span><?php print check_plain($account->content['identification']['profile_address']['#value']); ?></span></div>
     </div>
@@ -87,6 +86,4 @@
     <?php print $profile['appointments']; ?>
   </div>
 
-  <?php //print $user_profile; ?>
-  <?php //var_dump($account); ?>
 </div>
