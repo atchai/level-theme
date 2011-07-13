@@ -67,47 +67,4 @@ $(document).ready(function() {
   
   // hide privacy legend
   $('#user-profile-form legend:contains(privacy)').hide();
-
-
-  // Star Rating
-  
-  // scope internal var for each any_vote_points_widget
-  $('ul.any_vote_points_widget').each(function(){
-
-    // remove other classes to get numeric class names only
-    $(this).children().removeClass('first last');
-
-    // count stars with average-active class,
-     var average_count = $('a.average-active').length;
-     console.log('average_count='+average_count);
-
-     // highlight stars on rollover only when current user does not vote yet
-     $('.block-any_vote:not(.user_voted) ul.any_vote_points_widget li').hover(
-
-       // mouseover
-       function(){
-         console.log('inmouseover'+average_count);
-         $('ul.any_vote_points_widget a.average-active').removeClass('average-active');
-         var index = parseInt($(this).attr('class'));
-         // highlight stars below this one
-         for(i=0; i<=index; i++) {
-           $('ul.any_vote_points_widget li').eq(i).addClass('highlight');
-         }
-       },
-
-       // mouseout
-       function(){
-         // unhighlight all stars
-         $('ul.any_vote_points_widget li').removeClass('highlight');
-         console.log('inmouseout'+average_count);
-
-         // restore average-active class
-         for(i=0; i<average_count; i++) {
-           $('ul.any_vote_points_widget li').eq(i).find('a').addClass('average-active');
-         }
-       }
-     );
-
-  });
-
 });
