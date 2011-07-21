@@ -858,27 +858,6 @@ body.page-doc-person h1#page-title {
   border-top: 0 none;
 }
 
-/* linkedin user associate block */
-#block-level_user-level_user_profile_linkedin_driver .link-button {
-  padding: 0 185px 20px 185px;
-}
-
-#block-level_user-level_user_profile_linkedin_driver a.linkedin-button {
-  background: transparent url(../images/form-buttons.gif) -330px 0 no-repeat;
-  display: block;
-  height: 36px;
-  font: bold 30px/36px Arial, sans-serif;
-  text-align: left;
-  letter-spacing: -1px;
-  width: 273px;
-  padding: 6px 0 18px 56px;
-  color: #333;
-}
-#block-level_user-level_user_profile_linkedin_driver a.linkedin-button:hover {
-  background: transparent url(../images/form-buttons.gif) -330px -60px no-repeat;
-}
-
-
 /* Director profile(s) */
 .profile h3 {
   display: none;
@@ -1546,6 +1525,7 @@ a#level_accounts_download_link img {
   font-size: 1.2em;
 }
 
+
 #block-level_user-company_description.company_description_empty span {
   display: block;
   position: absolute;
@@ -1601,4 +1581,13 @@ body.section-doc #main-content form#node-form #edit-body-wrapper label {
   color: #000;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+/* #268 user page */
+body.section-user #content-top,
+body.section-users #content-top {
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }

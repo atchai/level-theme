@@ -140,7 +140,7 @@ body.logged-in .confirmDialog {
 
 /* claimed-profile */
 .block-level_claim_profile .claimed-profile {
-  background: transparent url(../../images/icon-claimed.gif) 0 0 no-repeat;
+  background: transparent url(../images/icon-claimed.gif) 0 0 no-repeat;
   padding: 17px 0 0 100px;
   margin-top: -15px;
   margin-left: -10px;
@@ -150,11 +150,21 @@ body.logged-in .confirmDialog {
 }
 
 /* claim profile blocks */
-#block-level_claim_profile-claim-director-profile-link-block {
+#block-level_claim_profile-user-profile-cta-block,
+#block-level_claim_profile-claim-director-profile-link-block,
+#block-level_claim_profile-linkedin-next-step-block {
   width: 460px;
   float: left;
   font: normal 24px/30px Georgia, 'Adobe Garamond Pro', serif;
   margin-bottom: 0
+}
+
+#block-level_claim_profile-user-profile-cta-block h2,
+#block-level_claim_profile-claim-director-profile-link-block h2,
+#block-level_claim_profile-linkedin-next-step-block h2 {
+  font: normal 50px/60px Georgia, 'Adobe Garamond Pro', serif;
+  color: #000;
+  margin-bottom: 5px;
 }
 
 #block-level_claim_profile-account-progress-block {
@@ -166,13 +176,7 @@ body.logged-in .confirmDialog {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background: #f7f7f7;
-  margin-bottom: 20px;
-}
-
-#block-level_claim_profile-claim-director-profile-link-block h2 {
-  font: normal 50px/60px Georgia, 'Adobe Garamond Pro', serif;
-  color: #000;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
 #block-level_claim_profile-account-progress-block h2 {
@@ -214,13 +218,15 @@ body.logged-in .confirmDialog {
   float: left;
   font-size: 12px;
   padding: 7px 10px;
+  margin-right: 5px;
   border: 1px solid #ccc;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   color: #999;
-  background: transparent url(../../images/button-grey-gradient.gif) 0 0 repeat-x;
+  background: transparent url(../images/button-grey-gradient.gif) 0 0 repeat-x;
 }
+
 #block-level_claim_profile-account-progress-block a:hover {
   color: #555;
   background: transparent url(../../images/button-grey-gradient.gif) 0 100% repeat-x;
@@ -240,4 +246,43 @@ body.logged-in .confirmDialog {
 #block-level_claim_profile-account-progress-block a.help {
   float: right;
   margin-right: 0;
+}
+
+form#linkedin-user-enable-form,
+form#linkedin-user-settings-form {
+  margin: 15px 0;
+  clear: both;
+  overflow: auto;
+}
+
+form#linkedin-user-enable-form p.description {
+  margin: 15px 0;
+  padding-top: 15px;
+  clear: both;
+}
+
+form#linkedin-user-settings-form input.form-submit {
+  margin-right: 10px;
+}
+
+/* apply gradeint grey button style */
+form#linkedin-user-enable-form input.form-submit,
+form#linkedin-user-settings-form input.form-submit {
+  display: block;
+  float: left;
+  font-size: 12px;
+  padding: 7px 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #999;
+  background: transparent url(../images/button-grey-gradient.gif) 0 0 repeat-x;
+}
+
+form#linkedin-user-enable-form input.form-submit:hover,
+form#linkedin-user-settings-form input.form-submit:hover {
+  color: #555;
+  background: transparent url(../images/button-grey-gradient.gif) 0 100% repeat-x;
 }
