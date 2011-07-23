@@ -141,7 +141,7 @@ body.logged-in .confirmDialog {
 
 /* claimed-profile */
 .block-level_claim_profile .claimed-profile {
-  background: transparent url(../images/icon-claimed.gif) 0 0 no-repeat;
+  background: transparent url(../../images/icon-claimed.gif) 0 0 no-repeat;
   padding: 17px 0 0 100px;
   margin-top: -15px;
   margin-left: -10px;
@@ -225,7 +225,7 @@ body.logged-in .confirmDialog {
   -webkit-border-radius: 2px;
   border-radius: 2px;
   color: #999;
-  background: transparent url(../images/button-grey-gradient.gif) 0 0 repeat-x;
+  background: transparent url(../../images/button-grey-gradient.gif) 0 0 repeat-x;
 }
 
 #block-level_claim_profile-account-progress-block a:hover {
@@ -279,11 +279,11 @@ form#linkedin-user-settings-form input.form-submit {
   -webkit-border-radius: 2px;
   border-radius: 2px;
   color: #999;
-  background: transparent url(../images/button-grey-gradient.gif) 0 0 repeat-x;
+  background: transparent url(../../images/button-grey-gradient.gif) 0 0 repeat-x;
 }
 
 form#linkedin-user-enable-form input.form-submit:hover,
 form#linkedin-user-settings-form input.form-submit:hover {
   color: #555;
-  background: transparent url(../images/button-grey-gradient.gif) 0 100% repeat-x;
+  background: transparent url(../../images/button-grey-gradient.gif) 0 100% repeat-x;
 }
