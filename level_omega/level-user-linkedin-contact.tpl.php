@@ -24,34 +24,33 @@
   // Define relationship texts
   $distance = $contact['distance'];
   $relation = '';
-  if ($distance === '1') {
-    $relation = ' directly on LinkedIn.';
-  }
-  if ($distance === '2' || $distance === '3') {
-    $relation = ' through someone else.';
-  }
-  if ($distance === '100') {
-    $relation = ' through a LinkedIn group.';
-  }
-
+  switch ($distance) {
+    case '1':
+      $relation = ' directly on LinkedIn.';
+      break;
+    case '2':
+      $relation = ' through someone else.';
+      break;
+    case '100':
+      $relation = ' through a LinkedIn group.';
+      break;
+    }
 ?>
 
 <a href="<?php print $contact['public-profile-url'] ?>" <?php print drupal_attributes($contact['#attributes'])?>>
 
-<span class="name-img clearfix">
-  <?php
-    if (isset($contact['picture-url'])) {
-      print '<img src="'.$contact['picture-url'].'">';
-    }
-    else {
-      print '<span class="img-placeholder"></span>';
-    }
-  ?>
-  <sapn class="name"><?php print $contact['first-name']; print ' ';  print $contact['last-name']; ?></span>
-</span>
+  <span class="name-img clearfix">
+    <?php
+      if (isset($contact['picture-url'])) {
+        print '<img src="'.$contact['picture-url'].'">';
+      }
+      else {
+        print '<span class="img-placeholder"></span>';
+      }
+    ?>
+    <span class="name"><?php print check_plain($contact['first-name'])?> <?php print check_plain($contact['last-name']); ?></span>
+  </span>
 
-<span class="relationship">You know <?php print $contact['first-name'] . $relation; ?></span>
-
-<?php //var_dump($contact); ?>
+  <span class="relationship">You know <?php print $contact['first-name'] . $relation; ?></span>
 
 </a>
